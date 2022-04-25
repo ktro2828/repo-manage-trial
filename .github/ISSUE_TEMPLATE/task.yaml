@@ -1,0 +1,30 @@
+name: Task
+description: Plan a task
+title: "[TODO]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this task planning!
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Write a brief description of the task.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Purpose
+      description: Describe the purpose of the task.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Possible approaches
+      description: Describe possible approaches for the task.
+    validations:
+      required: false
