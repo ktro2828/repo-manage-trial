@@ -1,11 +1,14 @@
 ## Category
 
-<!-- Check an item your change is most relative -->
-- [ ] Perception
-  - [ ] Detection
-  - [ ] Tracking
-  - [ ] Prediction
-- [ ] Sensing
+<!-- Check an item your change is most relative. -->
+<!-- If there is no relative item, add new one. -->
+- [ ] GitHub Actions
+  - [ ] Pull Request
+  - [ ] Release
+  - [ ] Changelog
+- [ ] Ansible
+- [ ] Pre-commit
+- [ ] Dependabot
 
 ## What
 
