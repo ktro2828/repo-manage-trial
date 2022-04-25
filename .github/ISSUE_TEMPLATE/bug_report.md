@@ -1,26 +1,30 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: '[BUG]: '
+title: "[BUG]: "
 labels: '["bug", "triage"]'
-assignees: ''
-
+assignees: ""
 ---
 
 ## Description
+
 Write a brief description of bug.
 
 ## Expected behavior
+
 Describe the expected behavior.
 
 ## Actual behavior
+
 Describe the actual behavior.
 
-	**Screenshots**
-	If applicable, add screenshots to help explain your problem.
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
 ## To Reproduce
+
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'

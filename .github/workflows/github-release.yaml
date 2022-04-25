@@ -2,8 +2,7 @@ name: github-release
 
 on:
   pull_request:
-    types:
-      - [closed]
+    types: [closed]
     branches:
       - main
     tags:
