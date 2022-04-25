@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## Describe the bug
+## Description
 Write a brief description of bug.
 
 ## Expected behavior
