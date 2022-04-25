@@ -52,4 +52,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOTES: ${{ steps.generate-changelog.outputs.changelog }}
-        
