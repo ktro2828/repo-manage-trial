@@ -3,9 +3,7 @@
 <!-- Check an item your change is most relative. -->
 <!-- If there is no relative item, add new one. -->
 - [ ] GitHub Actions
-  - [ ] Pull Request
-  - [ ] Release
-  - [ ] Changelog
+- [ ] Template
 - [ ] Ansible
 - [ ] Pre-commit
 - [ ] Dependabot
