@@ -13,7 +13,6 @@ on:
         type: string
         required: true
 
-
 jobs:
   github-release:
     runs-on: ubuntu-latest
