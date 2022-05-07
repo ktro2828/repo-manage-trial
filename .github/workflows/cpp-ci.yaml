@@ -1,0 +1,25 @@
+name: cpp-ci
+
+on:
+  push:
+
+jobs:
+  cpp-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+      - uses: actions/checkout@v2
+
+      - name: Create build directory
+        run: |
+          cd mycpppkg/test
+          mkdir build
+
+      - name: Download GoogleTest and build test
+        run: |
+          cd mycpppkg/test/build
+          cmake ..
+          cmake --build .
+
+      - name: Run test
+        run: ./mycpppkg/test/build/module_test

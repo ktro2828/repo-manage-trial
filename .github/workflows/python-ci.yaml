@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  formatting:
+  python-ci:
     runs-on: ubuntu-latest
     strategy:
       matrix:
