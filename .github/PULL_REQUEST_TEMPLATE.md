@@ -8,6 +8,7 @@
 - [ ] Ansible
 - [ ] Pre-commit
 - [ ] Dependabot
+- [ ] Other
 
 ## What
 
