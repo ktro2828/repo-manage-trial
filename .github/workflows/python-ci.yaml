@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: [3.8, 3.9]
 
     steps:
       - name: Checkout code
@@ -19,10 +19,16 @@ jobs:
         with:
           python-version: ${{matrix.python-version}}
 
-      - name: Install dependencies
+      - name: Install dependencies and run test
         run: |
-          python -m pip install -U pip
-          python pip install setuptools
           if [ -e requirements.txt ]; then
-            python pip install -r requirements.txt --no-cache-dir
+            python -m pip install -U pip
+            python -m pip install setuptools
+            python -m pip install -r requirements.txt --no-cache-dir
+            python -m unittest discover
+          fi
+
+          if [ -e pyproject.toml ]; then
+            poetry install
+            poetry run python3 -m unittest discover
           fi
