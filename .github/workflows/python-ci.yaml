@@ -1,0 +1,34 @@
+name: python-ci
+
+on:
+  push:
+
+jobs:
+  formatting:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup python ${{matrix.python-version}}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{matrix.python-version}}
+
+      - name: Install dependencies and run test
+        run: |
+          if [ -e requirements.txt ]; then
+            python -m pip install -U pip
+            python -m pip install setuptools
+            python -m pip install -r requirements.txt --no-cache-dir
+            python -m unittest discover
+          fi
+
+          if [ -e pyproject.toml ]; then
+            poetry install
+            poetry run python3 -m unittest discover
+          fi
