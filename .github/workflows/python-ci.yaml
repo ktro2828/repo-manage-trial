@@ -29,6 +29,10 @@ jobs:
           fi
 
           if [ -e pyproject.toml ]; then
+            sudo apt-get update
+            sudo apt-get install curl
+            curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+            export PATH="$HOME/.poetry/bin:$PATH"
             poetry install
             poetry run python3 -m unittest discover
           fi
