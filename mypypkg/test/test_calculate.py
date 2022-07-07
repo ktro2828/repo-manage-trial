@@ -1,4 +1,3 @@
-import math
 import unittest
 from typing import List, Tuple
 
@@ -53,9 +52,3 @@ class TestCalculate(unittest.TestCase):
             with self.subTest('Test div() function.'):
                 result = div(a, b)
                 self.assertEqual(result, ans)
-
-    def test_fail_in_py37(self):
-        with self.subTest('Test math.dist() function.'):
-            p1 = (1, 2, 3)
-            p2 = (4, 5, 6)
-            math.dist(p1, p2)
