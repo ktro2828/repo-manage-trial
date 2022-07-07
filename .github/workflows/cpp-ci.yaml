@@ -2,13 +2,15 @@ name: cpp-ci
 
 on:
   pull_request:
-    paths:
-      - "!docs/**"
-      - "!README.md"
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
   push:
-    paths:
-      - "!docs/**"
-      - "!README.md"
+    branched:
+      - main
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
 
 jobs:
   cpp-ci:

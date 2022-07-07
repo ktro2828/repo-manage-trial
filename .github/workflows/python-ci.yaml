@@ -2,20 +2,23 @@ name: python-ci
 
 on:
   pull_request:
-    paths:
-      - "!docs/**"
-      - "!README.md"
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
   push:
-    paths:
-      - "!docs/**"
-      - "!README.md"
+    branches:
+      - main
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
 
 jobs:
   python-ci:
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: ["3.7.11", "3.8", "3.9"]
 
     steps:
       - name: Checkout code
@@ -39,7 +42,9 @@ jobs:
             sudo apt-get update
             sudo apt-get install curl
             curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-            export PATH="$HOME/.poetry/bin:$PATH"
+            echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+            source $HOME/.poetry/env
             poetry install
+            cd mypypkg
             poetry run python3 -m unittest discover
           fi
