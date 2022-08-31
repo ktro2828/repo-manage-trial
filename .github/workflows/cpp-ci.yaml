@@ -6,7 +6,7 @@ on:
       - "docs/**"
       - "README.md"
   push:
-    branched:
+    branches:
       - main
     paths-ignore:
       - "docs/**"
