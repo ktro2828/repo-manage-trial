@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mypypkg"
-version = "0.1.0"
+version = "0.4.1"
 description = ""
 authors = ["Kotaro Uetake <kotaro.uetake@tier4.jp>"]
 packages = [
