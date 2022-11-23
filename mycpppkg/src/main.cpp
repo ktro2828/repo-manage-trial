@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "mycpppkg/calculate.hpp"
+#include "mycpppkg/image.hpp"
 
 int main()
 {
@@ -16,4 +17,6 @@ int main()
   std::cout << "mul = " << ret << std::endl;
   ret = mycpppkg::div(a, b);
   std::cout << "div = " << ret << std::endl;
+
+  bool img_ret = mycpppkg::readImg("../test/sample.jpg", true);
 }
