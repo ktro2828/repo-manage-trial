@@ -1,5 +1,0 @@
-feature: ["feature/*", "feat/*"]
-fix: fix/*
-ci: ci/*
-refactor: refactor/*
-chore :hammer:: chore/*
